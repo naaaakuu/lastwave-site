@@ -9,7 +9,7 @@
 <ul>
 <li>The game works fully offline and without an account.</li>
 <li>We do not run our own servers.</li>
-<li>Three Google services are used: <strong>Google AdMob</strong> (ads), <strong>Google Analytics</strong> (anonymous usage statistics, which you can switch off) and, only if you choose to sign in, <strong>Google Sign-In through Firebase Authentication</strong> (account).</li>
+<li>Google services are used for: ads (<strong>Google AdMob</strong>), anonymous usage statistics (<strong>Google Analytics</strong>) and the online leaderboards (<strong>Firebase</strong>), both of which you can switch off, and, only if you choose to sign in, your account (<strong>Google Sign-In through Firebase Authentication</strong>).</li>
 <li>There is no crash-reporting SDK in the game.</li>
 </ul>
 
@@ -23,7 +23,7 @@
 
 <h2>3. Advertising (Google AdMob)</h2>
 
-<p>The game shows two kinds of ads: <strong>optional rewarded ads</strong> that only play when you tap a button to watch one (to unlock the Brawler), and **occasional full-screen ads between solo runs** (never in your first three finished solo runs, then at most once every third run, and only after you tap PLAY AGAIN / TRY AGAIN). Ads are never shown during gameplay or in local multiplayer.</p>
+<p>The game shows two kinds of ads: <strong>optional rewarded ads</strong> that only play when you tap a button to watch one (to unlock the Brawler), and <strong>occasional full-screen ads between solo runs</strong> (never in your first three finished solo runs, then at most once every third run, and only after you tap PLAY AGAIN / TRY AGAIN). Ads are never shown during gameplay or in local multiplayer.</p>
 
 <p>Ads are provided by <strong>Google AdMob</strong> (Google Mobile Ads SDK). When an ad is requested, the SDK collects and shares with Google information from your device, which may include:</p>
 
@@ -63,36 +63,45 @@
 
 <p>Google processes this data for us under its terms: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>.</p>
 
-<h2>5. Optional Google Sign-In (Firebase Authentication)</h2>
+<h2>5. Online leaderboards (Firebase)</h2>
 
-<p>Signing in is optional and unlocks nothing. If you tap <strong>SIGN IN WITH GOOGLE</strong>, Google's account picker gives the game a sign-in token, which the game sends to **Firebase Authentication** (a Google service; our project is <code>last-wave-fa39f</code>) to create or sign in to an account. The account holds your <strong>Google user ID, display name and email address</strong>, and Firebase keeps standard authentication metadata (sign-in times, IP address). The game also keeps your name, email and a session token on your device so you stay signed in.</p>
+<p>After a <strong>DAILY RUN</strong> or an <strong>ENDLESS</strong> run, the game posts your best result to a public leaderboard that other players see in the game. To do this it signs in to <strong>Firebase Authentication</strong> anonymously (no account, name or email: only a random user ID made for this install) and stores your row in our <strong>Firebase Realtime Database</strong> (project <code>last-wave-fa39f</code>, run by Google, data stored in Singapore).</p>
+
+<p><strong>What a row holds:</strong> that random user ID, a nickname the game makes from it (for example GRIM-WOLF-482; you never type a name), your score (Daily Run) or the wave you reached and your kills (Endless), the run's length (Daily Run), the survivor you played, and when it was posted. Only a new best is posted. <strong>These rows are public:</strong> anyone playing the game can see the nickname, survivor and score. Google receives your IP address with each request, as with any connection. The ID is not linked to your Google account, name, email, advertising ID or usage statistics.</p>
+
+<p><strong>Your choices.</strong> <strong>Settings → SHARE USAGE DATA</strong> off also stops all posting (the boards can still be viewed). In the EEA, the UK and Switzerland the game does not post. Clearing the game's data or reinstalling gives the game a new ID. To have your rows removed, email us (below) with the nickname the board shows next to "(YOU)"; we delete them within 30 days.</p>
+
+<h2>6. Optional Google Sign-In (Firebase Authentication)</h2>
+
+<p>Signing in is optional and unlocks nothing. If you tap <strong>SIGN IN WITH GOOGLE</strong>, Google's account picker gives the game a sign-in token, which the game sends to <strong>Firebase Authentication</strong> (a Google service; our project is <code>last-wave-fa39f</code>) to create or sign in to an account. The account holds your <strong>Google user ID, display name and email address</strong>, and Firebase keeps standard authentication metadata (sign-in times, IP address). The game also keeps your name, email and a session token on your device so you stay signed in.</p>
 
 <p>We use this data only to identify your account. We do not use it for advertising, we do not share it with anyone other than Google (which processes it for us), and we do not combine it with your gameplay data. Firebase's data handling is described at <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>.</p>
 
 <p><strong>Deleting your account.</strong> In the game: menu → your account button → <strong>DELETE ACCOUNT</strong> (tap twice). This deletes the Firebase account and its data immediately and signs you out on the device. If you no longer have the game installed, follow <a href="https://naaaakuu.github.io/lastwave-site/delete-account.html">https://naaaakuu.github.io/lastwave-site/delete-account.html</a> or email us (below) with the address you signed in with; we delete the account within 30 days. Nothing else is kept.</p>
 
-<h2>6. Data retention</h2>
+<h2>7. Data retention</h2>
 
 <ul>
 <li>On-device data: until you reset progress or uninstall.</li>
 <li>Account data (sign-in only): until you delete the account.</li>
 <li>AdMob data: retained by Google under its own policy; we never receive it.</li>
 <li>Usage statistics: kept in Google Analytics for up to 14 months.</li>
+<li>Leaderboard rows: kept until we remove them or you ask us to delete yours.</li>
 </ul>
 
-<h2>7. Security</h2>
+<h2>8. Security</h2>
 
-<p>All connections to Google services, including usage statistics, use HTTPS. LAN play stays on your local network.</p>
+<p>All connections to Google services, including usage statistics and the leaderboards, use HTTPS. LAN play stays on your local network.</p>
 
-<h2>8. Children</h2>
+<h2>9. Children</h2>
 
 <p>The game is rated for teenagers and adults, is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
 
-<h2>9. Changes</h2>
+<h2>10. Changes</h2>
 
 <p>If this policy changes, the new version is posted at the same address with a new date.</p>
 
-<h2>10. Contact</h2>
+<h2>11. Contact</h2>
 
 <p><strong>Feedback and sharing.</strong> Settings &rarr; <strong>SEND FEEDBACK</strong> opens your own email app with a message to us, pre-filled with the game version and your device model; nothing is sent unless you send it. If you email us we receive your email address and what you write, use them only to reply and to improve the game, and delete them on request. Settings &rarr; <strong>SHARE GAME</strong> opens Android&rsquo;s share sheet with a link to the game, and <strong>RATE GAME</strong> opens its Google Play page; the game does not see what you share or with whom.</p>
 
