@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Last Wave — Privacy Policy</title><style>body{font-family:system-ui,sans-serif;max-width:760px;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#222}h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.6rem}.date{color:#666}code{background:#f2f2f2;padding:0 .25em}a{word-break:break-all}</style></head><body><h1>Last Wave — Privacy Policy</h1>
 
-<p class="date">Last updated: 14 October 2026</p>
+<p class="date">Last updated: 29 October 2026</p>
 
 <p>Last Wave ("the game") is made by Nakul Creations ("we"). This policy explains what information the game handles and why. It applies to the Android app <code>com.lastwave.game</code> distributed on Google Play. The same text is published at <a href="https://naaaakuu.github.io/lastwave-site/privacy.html">https://naaaakuu.github.io/lastwave-site/privacy.html</a> and linked from the game (Settings → ABOUT → PRIVACY POLICY).</p>
 
@@ -8,12 +8,9 @@
 
 <ul>
 <li>The game works fully offline and without an account.</li>
-<li>We do not run our own servers and do not receive your gameplay data.</li>
-<li>Two Google services are used: <strong>Google AdMob</strong> (ads) and, only if you choose to sign in,</li>
-</ul>
-<p>  <strong>Google Sign-In through Firebase Authentication</strong> (account).</p>
-<ul>
-<li>There is no analytics or crash-reporting SDK in the game.</li>
+<li>We do not run our own servers.</li>
+<li>Three Google services are used: <strong>Google AdMob</strong> (ads), <strong>Google Analytics</strong> (anonymous usage statistics, which you can switch off) and, only if you choose to sign in, <strong>Google Sign-In through Firebase Authentication</strong> (account).</li>
+<li>There is no crash-reporting SDK in the game.</li>
 </ul>
 
 <h2>1. Data the game itself stores on your device</h2>
@@ -54,7 +51,19 @@
 </ul>
 <p>  internet connection.</p>
 
-<h2>4. Optional Google Sign-In (Firebase Authentication)</h2>
+<h2>4. Anonymous usage statistics (Google Analytics)</h2>
+
+<p>To learn where players get stuck and what is worth improving, the game sends anonymous usage statistics to <strong>Google Analytics</strong> (the same Firebase project, <code>last-wave-fa39f</code>).</p>
+
+<p><strong>What is sent:</strong> a random ID the game makes on your phone the first time it runs (it is not your Google account, name, email or advertising ID, and is not linked to any of them), and events such as: opening the game, starting and finishing a run (map, difficulty, survivor, modifier, how far you got, time, kills, experience earned), waves cleared, what put your survivor down, upgrade cards picked, and whether a full-screen ad was shown. Also the game version, graphics setting, how many survivors you have unlocked, and basic device information (model, Android version, language). Google receives your IP address with each request and uses it to derive an approximate location (country level); we do not receive or store IP addresses.</p>
+
+<p><strong>What is not sent:</strong> your name, your email, anything you type, your contacts, your precise location, or anything about a LAN match beyond the events above.</p>
+
+<p><strong>Your choices.</strong> <strong>Settings → SHARE USAGE DATA</strong> switches it off; anything not yet sent is discarded. In the EEA, the UK and Switzerland, where consent is required, the game does not send usage statistics at all. Because the ID is random and not linked to you, we cannot tell which data is yours; clearing the game's data or reinstalling gives the game a new ID.</p>
+
+<p>Google processes this data for us under its terms: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>.</p>
+
+<h2>5. Optional Google Sign-In (Firebase Authentication)</h2>
 
 <p>Signing in is optional and unlocks nothing. If you tap <strong>SIGN IN WITH GOOGLE</strong>, Google's account picker gives the game a sign-in token, which the game sends to **Firebase Authentication** (a Google service; our project is <code>last-wave-fa39f</code>) to create or sign in to an account. The account holds your <strong>Google user ID, display name and email address</strong>, and Firebase keeps standard authentication metadata (sign-in times, IP address). The game also keeps your name, email and a session token on your device so you stay signed in.</p>
 
@@ -62,27 +71,28 @@
 
 <p><strong>Deleting your account.</strong> In the game: menu → your account button → <strong>DELETE ACCOUNT</strong> (tap twice). This deletes the Firebase account and its data immediately and signs you out on the device. If you no longer have the game installed, follow <a href="https://naaaakuu.github.io/lastwave-site/delete-account.html">https://naaaakuu.github.io/lastwave-site/delete-account.html</a> or email us (below) with the address you signed in with; we delete the account within 30 days. Nothing else is kept.</p>
 
-<h2>5. Data retention</h2>
+<h2>6. Data retention</h2>
 
 <ul>
 <li>On-device data: until you reset progress or uninstall.</li>
 <li>Account data (sign-in only): until you delete the account.</li>
 <li>AdMob data: retained by Google under its own policy; we never receive it.</li>
+<li>Usage statistics: kept in Google Analytics for up to 14 months.</li>
 </ul>
 
-<h2>6. Security</h2>
+<h2>7. Security</h2>
 
-<p>All connections to Google services use HTTPS. LAN play stays on your local network.</p>
+<p>All connections to Google services, including usage statistics, use HTTPS. LAN play stays on your local network.</p>
 
-<h2>7. Children</h2>
+<h2>8. Children</h2>
 
 <p>The game is rated for teenagers and adults, is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
 
-<h2>8. Changes</h2>
+<h2>9. Changes</h2>
 
 <p>If this policy changes, the new version is posted at the same address with a new date.</p>
 
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 
 <p><strong>Feedback and sharing.</strong> Settings &rarr; <strong>SEND FEEDBACK</strong> opens your own email app with a message to us, pre-filled with the game version and your device model; nothing is sent unless you send it. If you email us we receive your email address and what you write, use them only to reply and to improve the game, and delete them on request. Settings &rarr; <strong>SHARE GAME</strong> opens Android&rsquo;s share sheet with a link to the game, and <strong>RATE GAME</strong> opens its Google Play page; the game does not see what you share or with whom.</p>
 
